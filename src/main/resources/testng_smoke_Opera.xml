@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FieldWire UI Smoke Test Suite" thread-count="4" parallel="methods">
+
+    <test name="FieldWire UI Smoke Tests for Opera browser" thread-count="2" parallel="methods">
+        <parameter name="browser" value="opera"/>
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+
+        <packages>
+            <package name="com.fieldwire.test.ui.tests.*"/>
+        </packages>
+    </test>
+
+    <listeners>
+        <listener class-name="com.fieldwire.test.ui.tests.listeners.TestListener"/>
+    </listeners>
+</suite>

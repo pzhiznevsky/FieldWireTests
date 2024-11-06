@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FieldWire UI Regression Test Suite">
+
+    <test name="FieldWire UI Regression Tests for Opera browser">
+        <parameter name="browser" value="opera"/>
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+
+        <packages>
+            <package name="com.fieldwire.test.ui.tests.*"/>
+        </packages>
+    </test>
+
+    <listeners>
+        <listener class-name="com.fieldwire.test.ui.tests.listeners.TestListener"/>
+    </listeners>
+</suite>
